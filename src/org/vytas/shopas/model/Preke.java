@@ -1,4 +1,4 @@
-package baldai;
+package org.vytas.shopas.model;
 
 public class Preke {
 	
@@ -14,7 +14,6 @@ public class Preke {
 	
 	
 	public Preke(double plotis, double aukstis, double gylis, double svoris, String pavadinimas, String serijosNr) {
-		super();
 		this.plotis = plotis;
 		this.aukstis = aukstis;
 		this.gylis = gylis;

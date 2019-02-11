@@ -1,7 +1,9 @@
-package baldai;
+package org.vytas.shopas.data;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.vytas.shopas.model.Preke;
 
 public class DataLoader {
 
@@ -17,3 +19,5 @@ public class DataLoader {
 	}
 
 }
+//Rusiuoti pagal matmenis, jei nera atitinkamo, pateikti artimiausius variantus tai paieskai.
+//Parasyti ribas kiek nuo duotu paieskos duomenu gali skirtis pateikiami rezultatai, jei nera tikslaus varianto.
