@@ -1,9 +1,9 @@
 package org.vytas.shopas;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.vytas.shopas.data.DataLoader;
+import org.vytas.shopas.data.IDataLoader;
 import org.vytas.shopas.filters.Filtras;
 import org.vytas.shopas.model.Preke;
 
@@ -11,7 +11,7 @@ public class PrekeAPP {
 
 	public static void main(String[] args) {
 
-		DataLoader duomenuIkroviklis = new DataLoader();
+		IDataLoader duomenuIkroviklis = new DataLoader();
 		
 		List<Preke> duomenys = duomenuIkroviklis.loadData();
 		
@@ -21,8 +21,8 @@ public class PrekeAPP {
 		
 		System.out.println();
 		
-		Filtras naujasFiltras = new Filtras(1);
-		List<Preke> result = naujasFiltras.paieska(duomenys,21.98, 45.05, null, null, null, null);
+		Filtras naujasFiltras = new Filtras(duomenys);
+		List<Preke> result = naujasFiltras.paieska(21.98, 45.05, null, null, null, null);
 		for (Preke preke : result) {
 			System.out.println(preke.getPavadinimas());
 		}

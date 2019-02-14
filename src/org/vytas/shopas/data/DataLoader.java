@@ -5,8 +5,9 @@ import java.util.List;
 
 import org.vytas.shopas.model.Preke;
 
-public class DataLoader {
+public class DataLoader implements IDataLoader {
 
+	@Override
 	public List<Preke> loadData() {
 
 		List<Preke> rezultatas = new ArrayList<Preke>();
